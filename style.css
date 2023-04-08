@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a5d7e8;
+}
+
+.clock {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: #19376d;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 3px 14px #89375f;
+}
+
+.hour {
+  position: absolute;
+  width: 6px;
+  height: 150px;
+  background-color: #576cbc;
+  top: 50px;
+  left: 200px;
+  border-radius: 4px;
+  animation: hourHand 86400s infinite;
+  transform-origin: bottom center;
+  animation-timing-function: linear;
+}
+
+@keyframes hourHand {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.minutes {
+  position: absolute;
+  width: 5px;
+  height: 165px;
+  background-color: #a5d7e8;
+  top: 30px;
+  left: 200px;
+  border-radius: 4px;
+  animation: minuteHand 3600s infinite;
+  transform-origin: bottom center;
+  animation-timing-function: linear;
+}
+
+@keyframes minuteHand {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.seconds {
+  position: absolute;
+  width: 4px;
+  height: 150px;
+  background-color: #89375f;
+  top: 50px;
+  left: 200px;
+  border-radius: 4px;
+  z-index: 3;
+  animation: minuteHand 60s infinite;
+  transform-origin: bottom center;
+  animation-timing-function: linear;
+}
+
+@keyframes secondhand {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #89375f;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
